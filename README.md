@@ -19,32 +19,32 @@
 6. 下圖右為NXU的實體網路拓譜圖，左圖為NYU的機櫃圖。
 ![img01](https://raw.githubusercontent.com/jjmao-cs/Packet-Tracer/master/img/01.png)
 7. 下圖為本專題的邏輯網路拓譜圖，左區為目標拓譜區NXU，右區為測試及遞迴DNS區NYU。
-![img02](../img/02.jpg)
-8. 下圖為本專題的實體拓譜圖（城市視野）
-![img03](../img/03.jpg)
+![img02](/img/02.jpg)
+1. 下圖為本專題的實體拓譜圖（城市視野）
+![img03](/img/03.jpg)
 
 ## 各項服務（含路由器設計）：
 
 1. Recursive DNS Servers：
-    ![img04](../img/04.jpg)
+![img04](/img/04.jpg)
     * Root節點：根節點設定指向下一層edu (TLD)
     * edu節點：TLD節點，指向NXU及NYU
-2. NXU、NYU DNS Server：
-    ![img05](../img/05.jpg)
+1. NXU、NYU DNS Server：
+![img05](/img/05.jpg)
     * 在DNS Server中輸入根節點，查詢由根結點開始。
     * 管理各校內部的域名轉址。
     * 提供郵件伺服器域名轉址服務和處理一般查詢。
-3. Mail Server：
-    ![img6](../img/06.jpg)
+1. Mail Server：
+![img6](/img/06.jpg)
     * 在郵件伺服器中設定email address後面的郵件伺服器domain name和管理使用者。
     * 由NXU的User1(左)寄給NYU的User3(右)。
-    ![img7](../img/07.jpg)
+    ![img7](/img/07.jpg)
     * 由NXU的User1(左)寄給NXU的User2(右)。
-    ![img8](../img/08.jpg)
-4. DHCP Server：
-    ![img9](../img/09.png)
+    ![img8](/img/08.jpg)
+1. DHCP Server：
+![img9](/img/09.png)
     * 各實驗室與電腦教室利用DHCP分配IP減少IP設定時所需的成本。
-5. WireLess Access Point：
+1. WireLess Access Point：
    * 將AP的名稱設為相同，讓使用者可以不間斷使用無線網路。
    * 在AP網段中使用DHCP Server分配IP位址。
 
@@ -71,8 +71,8 @@
 ## 路由機制的規劃：
 * 路由器之間使用Dynamic Routing 的OSPF機制，主要可以避免在在更動一台Router時需要連動去更新其他相連的Router。
 下圖為NXU的routing狀況，可見NYU的140.115.10.0/24是透過OSPF協定完成的。
-![img10](../img/10.png)
+![img10](/img/10.png)
 下圖為NXU的routing狀況，可見NXU的140.115.20.0/24是透過OSPF協定完成的。
-![img11](../img/11.png)
+![img11](/img/11.png)
 
 
